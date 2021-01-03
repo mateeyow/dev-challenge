@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "PORT=8080 DEBUG=server:server nodemon --exec babel-node ./bin/www",
+    "server": "PORT=8080 NODE_ENV=production DEBUG=server:server babel-node ./bin/www",
     "lint": "eslint ."
   },
   "dependencies": {
