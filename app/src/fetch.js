@@ -1,6 +1,7 @@
 import axios from 'axios'
 
-const fetch = axios.create({ baseURL: 'http://localhost:8080' })
+const { SERVER_URL = 'http://localhost:8080' } = process.env
+const fetch = axios.create({ baseURL: SERVER_URL })
 
 fetch.interceptors.response.use((res) => res.data)
 
